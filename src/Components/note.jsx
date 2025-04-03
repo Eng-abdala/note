@@ -16,7 +16,7 @@ const Note = ()=>{
     // function that post data to the api
     const PostData=(event)=>{
         event.preventDefault()
-        axios.post("http://localhost:5000/create",{
+        axios.post("https://noteapp-wowl.onrender.com/create",{
             "title":title,
             "description":description
     

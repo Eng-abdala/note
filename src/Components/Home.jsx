@@ -4,7 +4,7 @@ import {toast,Toaster} from "react-hot-toast"
 const Home =()=>{
     const [note,setNote]=useState([])
     const getdata =  ()=>{
-        axios.get('http://localhost:5000/get').then((response)=>{
+        axios.get('https://noteapp-wowl.onrender.com/get').then((response)=>{
             setNote(response.data)
 
         }).catch((error)=>{
@@ -17,7 +17,7 @@ const Home =()=>{
     },[])
     // function that delets data
     const deleteData = (id)=>{
-        axios.delete(`http://localhost:5000/delete/${id}`).then(()=>{
+        axios.delete(`https://noteapp-wowl.onrender.com/${id}`).then(()=>{
             toast.success("this task is deleted")
             getdata()
         }).catch((error)=>[
