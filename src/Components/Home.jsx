@@ -17,7 +17,7 @@ const Home =()=>{
     },[])
     // function that delets data
     const deleteData = (id)=>{
-        axios.delete(`https://noteapp-wowl.onrender.com/${id}`).then(()=>{
+        axios.delete(`https://noteapp-wowl.onrender.com/delete/${id}`).then(()=>{
             toast.success("this task is deleted")
             getdata()
         }).catch((error)=>[
